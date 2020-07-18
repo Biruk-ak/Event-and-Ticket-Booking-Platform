@@ -1,0 +1,17 @@
+{
+  "name": "event-and-ticket-booking-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Event and Ticket Booking Platform",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "author": "Biruk-ak <birukaklilu0110@gmail.com>",
+  "license": "MIT"
+}

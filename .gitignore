@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+.expo/
+coverage/
+.env
+.env.local
+*.log
+.DS_Store
+.idea/
+.vscode/
+_generate_history.py
