@@ -4,6 +4,8 @@ import { HealthController } from './health/health.controller';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { EventModule } from './event/event.module';
+import { TicketModule } from './ticket/ticket.module';
+import { OrderModule } from './order/order.module';
 
 @Module({
   imports: [
@@ -20,6 +22,8 @@ import { EventModule } from './event/event.module';
     UserModule,
     AuthModule,
     EventModule,
+    TicketModule,
+    OrderModule,
   ],
   controllers: [HealthController],
 })
