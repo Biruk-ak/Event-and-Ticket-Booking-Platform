@@ -6,6 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { EventModule } from './event/event.module';
 import { TicketModule } from './ticket/ticket.module';
 import { OrderModule } from './order/order.module';
+import { QrModule } from './qr/qr.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { OrderModule } from './order/order.module';
     EventModule,
     TicketModule,
     OrderModule,
+    QrModule,
   ],
   controllers: [HealthController],
 })
