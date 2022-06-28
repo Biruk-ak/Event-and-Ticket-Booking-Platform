@@ -7,6 +7,8 @@ import { EventModule } from './event/event.module';
 import { TicketModule } from './ticket/ticket.module';
 import { OrderModule } from './order/order.module';
 import { QrModule } from './qr/qr.module';
+import { VenueModule } from './venue/venue.module';
+import { CategoryModule } from './category/category.module';
 
 @Module({
   imports: [
@@ -26,6 +28,8 @@ import { QrModule } from './qr/qr.module';
     TicketModule,
     OrderModule,
     QrModule,
+    VenueModule,
+    CategoryModule,
   ],
   controllers: [HealthController],
 })
