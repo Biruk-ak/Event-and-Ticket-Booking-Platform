@@ -9,6 +9,7 @@ import { OrderModule } from './order/order.module';
 import { QrModule } from './qr/qr.module';
 import { VenueModule } from './venue/venue.module';
 import { CategoryModule } from './category/category.module';
+import { RefundModule } from './refund/refund.module';
 
 @Module({
   imports: [
@@ -30,6 +31,7 @@ import { CategoryModule } from './category/category.module';
     QrModule,
     VenueModule,
     CategoryModule,
+    RefundModule,
   ],
   controllers: [HealthController],
 })
