@@ -10,6 +10,7 @@ import { QrModule } from './qr/qr.module';
 import { VenueModule } from './venue/venue.module';
 import { CategoryModule } from './category/category.module';
 import { RefundModule } from './refund/refund.module';
+import { DiscountModule } from './discount/discount.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { RefundModule } from './refund/refund.module';
     VenueModule,
     CategoryModule,
     RefundModule,
+    DiscountModule,
   ],
   controllers: [HealthController],
 })
