@@ -11,6 +11,7 @@ import { VenueModule } from './venue/venue.module';
 import { CategoryModule } from './category/category.module';
 import { RefundModule } from './refund/refund.module';
 import { DiscountModule } from './discount/discount.module';
+import { SponsorModule } from './sponsor/sponsor.module';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { DiscountModule } from './discount/discount.module';
     CategoryModule,
     RefundModule,
     DiscountModule,
+    SponsorModule,
   ],
   controllers: [HealthController],
 })
