@@ -13,6 +13,7 @@ import { RefundModule } from './refund/refund.module';
 import { DiscountModule } from './discount/discount.module';
 import { SponsorModule } from './sponsor/sponsor.module';
 import { NotificationModule } from './notification/notification.module';
+import { CalendarModule } from './calendar/calendar.module';
 
 @Module({
   imports: [
@@ -38,6 +39,7 @@ import { NotificationModule } from './notification/notification.module';
     DiscountModule,
     SponsorModule,
     NotificationModule,
+    CalendarModule,
   ],
   controllers: [HealthController],
 })
