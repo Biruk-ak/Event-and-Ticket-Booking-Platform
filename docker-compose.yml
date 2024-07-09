@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:12-alpine
+    image: postgres:15-alpine
     environment:
       POSTGRES_USER: etbp
       POSTGRES_PASSWORD: etbp
@@ -18,7 +18,7 @@ services:
       retries: 5
 
   redis:
-    image: redis:6-alpine
+    image: redis:7-alpine
     ports:
       - '6379:6379'
 
@@ -34,6 +34,8 @@ services:
       DB_PASSWORD: etbp
       DB_NAME: etbp
       REDIS_URL: redis://redis:6379
+      JWT_SECRET: change-me-in-production
+      QR_SECRET: change-me-qr
     ports:
       - '3000:3000'
     depends_on:
@@ -41,6 +43,35 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
+
+  organizer:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.organizer
+    ports:
+      - '8080:80'
+    depends_on:
+      - api
+
+  admin:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.admin
+    ports:
+      - '8081:80'
+    depends_on:
+      - api
+
+  mobile:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.mobile
+    ports:
+      - '8082:8081'
+    environment:
+      API_URL: http://api:3000/api/v1
+    depends_on:
+      - api
 
 volumes:
   pgdata:
