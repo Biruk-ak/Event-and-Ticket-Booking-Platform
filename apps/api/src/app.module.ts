@@ -14,6 +14,7 @@ import { DiscountModule } from './discount/discount.module';
 import { SponsorModule } from './sponsor/sponsor.module';
 import { NotificationModule } from './notification/notification.module';
 import { CalendarModule } from './calendar/calendar.module';
+import { AnalyticsModule } from './analytics/analytics.module';
 
 @Module({
   imports: [
@@ -40,6 +41,7 @@ import { CalendarModule } from './calendar/calendar.module';
     SponsorModule,
     NotificationModule,
     CalendarModule,
+    AnalyticsModule,
   ],
   controllers: [HealthController],
 })
