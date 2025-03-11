@@ -15,6 +15,7 @@ import { SponsorModule } from './sponsor/sponsor.module';
 import { NotificationModule } from './notification/notification.module';
 import { CalendarModule } from './calendar/calendar.module';
 import { AnalyticsModule } from './analytics/analytics.module';
+import { ReportModule } from './report/report.module';
 
 @Module({
   imports: [
@@ -42,6 +43,7 @@ import { AnalyticsModule } from './analytics/analytics.module';
     NotificationModule,
     CalendarModule,
     AnalyticsModule,
+    ReportModule,
   ],
   controllers: [HealthController],
 })
