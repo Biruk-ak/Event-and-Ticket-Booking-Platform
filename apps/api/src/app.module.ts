@@ -16,6 +16,7 @@ import { NotificationModule } from './notification/notification.module';
 import { CalendarModule } from './calendar/calendar.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 import { ReportModule } from './report/report.module';
+import { MessageModule } from './message/message.module';
 
 @Module({
   imports: [
@@ -44,6 +45,7 @@ import { ReportModule } from './report/report.module';
     CalendarModule,
     AnalyticsModule,
     ReportModule,
+    MessageModule,
   ],
   controllers: [HealthController],
 })
