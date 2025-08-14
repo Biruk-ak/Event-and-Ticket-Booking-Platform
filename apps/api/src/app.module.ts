@@ -17,6 +17,7 @@ import { CalendarModule } from './calendar/calendar.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 import { ReportModule } from './report/report.module';
 import { MessageModule } from './message/message.module';
+import { ReviewModule } from './review/review.module';
 
 @Module({
   imports: [
@@ -46,6 +47,7 @@ import { MessageModule } from './message/message.module';
     AnalyticsModule,
     ReportModule,
     MessageModule,
+    ReviewModule,
   ],
   controllers: [HealthController],
 })
