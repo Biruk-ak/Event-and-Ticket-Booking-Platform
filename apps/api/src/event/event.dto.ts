@@ -3,33 +3,59 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateEventDto {
-  @IsString()\n  @IsOptional()\n  organizerId?: string;
+  @IsString()
+  @IsOptional()
+  organizerId?: string;
 
-  @IsString()\n  @IsOptional()\n  title?: string;
+  @IsString()
+  @IsOptional()
+  title?: string;
 
-  @IsString()\n  @IsOptional()\n  slug?: string;
+  @IsString()
+  @IsOptional()
+  slug?: string;
 
-  @IsString()\n  @IsOptional()\n  description?: string;
+  @IsString()
+  @IsOptional()
+  description?: string;
 
-  @IsString()\n  @IsOptional()\n  status?: string;
+  @IsString()
+  @IsOptional()
+  status?: string;
 
-  @IsOptional()\n  startsAt?: any;
+  @IsOptional()
+  startsAt?: any;
 
-  @IsOptional()\n  endsAt?: any;
+  @IsOptional()
+  endsAt?: any;
 
-  @IsString()\n  @IsOptional()\n  timezone?: string;
+  @IsString()
+  @IsOptional()
+  timezone?: string;
 
-  @IsString()\n  @IsOptional()\n  venueName?: string;
+  @IsString()
+  @IsOptional()
+  venueName?: string;
 
-  @IsString()\n  @IsOptional()\n  venueAddress?: string;
+  @IsString()
+  @IsOptional()
+  venueAddress?: string;
 
-  @IsString()\n  @IsOptional()\n  venueCity?: string;
+  @IsString()
+  @IsOptional()
+  venueCity?: string;
 
-  @IsString()\n  @IsOptional()\n  coverImageUrl?: string;
+  @IsString()
+  @IsOptional()
+  coverImageUrl?: string;
 
-  @IsBoolean()\n  @IsOptional()\n  isFeatured?: boolean;
+  @IsBoolean()
+  @IsOptional()
+  isFeatured?: boolean;
 
-  @IsNumber()\n  @IsOptional()\n  capacity?: number;
+  @IsNumber()
+  @IsOptional()
+  capacity?: number;
 }
 
 export class UpdateEventDto extends PartialType(CreateEventDto) {}

@@ -3,19 +3,32 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateReviewDto {
-  @IsString()\n  @IsOptional()\n  eventId?: string;
+  @IsString()
+  @IsOptional()
+  eventId?: string;
 
-  @IsString()\n  @IsOptional()\n  authorId?: string;
+  @IsString()
+  @IsOptional()
+  authorId?: string;
 
-  @IsNumber()\n  @IsOptional()\n  rating?: number;
+  @IsNumber()
+  @IsOptional()
+  rating?: number;
 
-  @IsString()\n  @IsOptional()\n  title?: string;
+  @IsString()
+  @IsOptional()
+  title?: string;
 
-  @IsString()\n  @IsOptional()\n  body?: string;
+  @IsString()
+  @IsOptional()
+  body?: string;
 
-  @IsBoolean()\n  @IsOptional()\n  isPublished?: boolean;
+  @IsBoolean()
+  @IsOptional()
+  isPublished?: boolean;
 
-  @IsOptional()\n  moderatedAt?: any;
+  @IsOptional()
+  moderatedAt?: any;
 }
 
 export class UpdateReviewDto extends PartialType(CreateReviewDto) {}

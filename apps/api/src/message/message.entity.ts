@@ -12,13 +12,20 @@ export class Message {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  threadId: string;
-  @Column({ type: 'varchar', nullable: true })\n  senderId: string;
-  @Column({ type: 'varchar', nullable: true })\n  recipientId: string;
-  @Column({ type: 'varchar', nullable: true })\n  eventId: string;
-  @Column({ type: 'varchar', nullable: true })\n  body: string;
-  @Column({ type: 'boolean', default: false })\n  isRead: boolean;
-  @Column({ type: 'timestamptz', nullable: true })\n  sentAt: Date;
+  @Column({ type: 'varchar', nullable: true })
+  threadId: string;
+  @Column({ type: 'varchar', nullable: true })
+  senderId: string;
+  @Column({ type: 'varchar', nullable: true })
+  recipientId: string;
+  @Column({ type: 'varchar', nullable: true })
+  eventId: string;
+  @Column({ type: 'varchar', nullable: true })
+  body: string;
+  @Column({ type: 'boolean', default: false })
+  isRead: boolean;
+  @Column({ type: 'timestamptz', nullable: true })
+  sentAt: Date;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

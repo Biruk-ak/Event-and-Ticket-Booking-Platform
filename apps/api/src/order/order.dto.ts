@@ -3,19 +3,32 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateOrderDto {
-  @IsString()\n  @IsOptional()\n  buyerId?: string;
+  @IsString()
+  @IsOptional()
+  buyerId?: string;
 
-  @IsString()\n  @IsOptional()\n  eventId?: string;
+  @IsString()
+  @IsOptional()
+  eventId?: string;
 
-  @IsString()\n  @IsOptional()\n  status?: string;
+  @IsString()
+  @IsOptional()
+  status?: string;
 
-  @IsNumber()\n  @IsOptional()\n  totalCents?: number;
+  @IsNumber()
+  @IsOptional()
+  totalCents?: number;
 
-  @IsString()\n  @IsOptional()\n  currency?: string;
+  @IsString()
+  @IsOptional()
+  currency?: string;
 
-  @IsString()\n  @IsOptional()\n  discountCode?: string;
+  @IsString()
+  @IsOptional()
+  discountCode?: string;
 
-  @IsOptional()\n  paidAt?: any;
+  @IsOptional()
+  paidAt?: any;
 }
 
 export class UpdateOrderDto extends PartialType(CreateOrderDto) {}

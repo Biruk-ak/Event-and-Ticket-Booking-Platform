@@ -3,19 +3,33 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateSponsorDto {
-  @IsString()\n  @IsOptional()\n  eventId?: string;
+  @IsString()
+  @IsOptional()
+  eventId?: string;
 
-  @IsString()\n  @IsOptional()\n  name?: string;
+  @IsString()
+  @IsOptional()
+  name?: string;
 
-  @IsString()\n  @IsOptional()\n  tier?: string;
+  @IsString()
+  @IsOptional()
+  tier?: string;
 
-  @IsString()\n  @IsOptional()\n  logoUrl?: string;
+  @IsString()
+  @IsOptional()
+  logoUrl?: string;
 
-  @IsString()\n  @IsOptional()\n  websiteUrl?: string;
+  @IsString()
+  @IsOptional()
+  websiteUrl?: string;
 
-  @IsNumber()\n  @IsOptional()\n  contributionCents?: number;
+  @IsNumber()
+  @IsOptional()
+  contributionCents?: number;
 
-  @IsBoolean()\n  @IsOptional()\n  isActive?: boolean;
+  @IsBoolean()
+  @IsOptional()
+  isActive?: boolean;
 }
 
 export class UpdateSponsorDto extends PartialType(CreateSponsorDto) {}

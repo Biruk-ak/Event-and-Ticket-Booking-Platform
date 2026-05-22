@@ -3,19 +3,32 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateReportDto {
-  @IsString()\n  @IsOptional()\n  ownerId?: string;
+  @IsString()
+  @IsOptional()
+  ownerId?: string;
 
-  @IsString()\n  @IsOptional()\n  eventId?: string;
+  @IsString()
+  @IsOptional()
+  eventId?: string;
 
-  @IsString()\n  @IsOptional()\n  type?: string;
+  @IsString()
+  @IsOptional()
+  type?: string;
 
-  @IsString()\n  @IsOptional()\n  format?: string;
+  @IsString()
+  @IsOptional()
+  format?: string;
 
-  @IsString()\n  @IsOptional()\n  status?: string;
+  @IsString()
+  @IsOptional()
+  status?: string;
 
-  @IsString()\n  @IsOptional()\n  fileUrl?: string;
+  @IsString()
+  @IsOptional()
+  fileUrl?: string;
 
-  @IsOptional()\n  generatedAt?: any;
+  @IsOptional()
+  generatedAt?: any;
 }
 
 export class UpdateReportDto extends PartialType(CreateReportDto) {}

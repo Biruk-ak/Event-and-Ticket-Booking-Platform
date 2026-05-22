@@ -12,13 +12,20 @@ export class Review {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  eventId: string;
-  @Column({ type: 'varchar', nullable: true })\n  authorId: string;
-  @Column({ type: 'int', default: 0 })\n  rating: number;
-  @Column({ type: 'varchar', nullable: true })\n  title: string;
-  @Column({ type: 'varchar', nullable: true })\n  body: string;
-  @Column({ type: 'boolean', default: false })\n  isPublished: boolean;
-  @Column({ type: 'timestamptz', nullable: true })\n  moderatedAt: Date;
+  @Column({ type: 'varchar', nullable: true })
+  eventId: string;
+  @Column({ type: 'varchar', nullable: true })
+  authorId: string;
+  @Column({ type: 'int', default: 0 })
+  rating: number;
+  @Column({ type: 'varchar', nullable: true })
+  title: string;
+  @Column({ type: 'varchar', nullable: true })
+  body: string;
+  @Column({ type: 'boolean', default: false })
+  isPublished: boolean;
+  @Column({ type: 'timestamptz', nullable: true })
+  moderatedAt: Date;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

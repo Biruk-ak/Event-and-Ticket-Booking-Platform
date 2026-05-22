@@ -12,13 +12,20 @@ export class Order {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  buyerId: string;
-  @Column({ type: 'varchar', nullable: true })\n  eventId: string;
-  @Column({ type: 'varchar', nullable: true })\n  status: string;
-  @Column({ type: 'int', default: 0 })\n  totalCents: number;
-  @Column({ type: 'varchar', nullable: true })\n  currency: string;
-  @Column({ type: 'varchar', nullable: true })\n  discountCode: string;
-  @Column({ type: 'timestamptz', nullable: true })\n  paidAt: Date;
+  @Column({ type: 'varchar', nullable: true })
+  buyerId: string;
+  @Column({ type: 'varchar', nullable: true })
+  eventId: string;
+  @Column({ type: 'varchar', nullable: true })
+  status: string;
+  @Column({ type: 'int', default: 0 })
+  totalCents: number;
+  @Column({ type: 'varchar', nullable: true })
+  currency: string;
+  @Column({ type: 'varchar', nullable: true })
+  discountCode: string;
+  @Column({ type: 'timestamptz', nullable: true })
+  paidAt: Date;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

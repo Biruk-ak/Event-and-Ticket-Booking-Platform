@@ -12,13 +12,20 @@ export class Report {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  ownerId: string;
-  @Column({ type: 'varchar', nullable: true })\n  eventId: string;
-  @Column({ type: 'varchar', nullable: true })\n  type: string;
-  @Column({ type: 'varchar', nullable: true })\n  format: string;
-  @Column({ type: 'varchar', nullable: true })\n  status: string;
-  @Column({ type: 'varchar', nullable: true })\n  fileUrl: string;
-  @Column({ type: 'timestamptz', nullable: true })\n  generatedAt: Date;
+  @Column({ type: 'varchar', nullable: true })
+  ownerId: string;
+  @Column({ type: 'varchar', nullable: true })
+  eventId: string;
+  @Column({ type: 'varchar', nullable: true })
+  type: string;
+  @Column({ type: 'varchar', nullable: true })
+  format: string;
+  @Column({ type: 'varchar', nullable: true })
+  status: string;
+  @Column({ type: 'varchar', nullable: true })
+  fileUrl: string;
+  @Column({ type: 'timestamptz', nullable: true })
+  generatedAt: Date;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

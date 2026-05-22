@@ -3,21 +3,36 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateRefundDto {
-  @IsString()\n  @IsOptional()\n  orderId?: string;
+  @IsString()
+  @IsOptional()
+  orderId?: string;
 
-  @IsString()\n  @IsOptional()\n  ticketId?: string;
+  @IsString()
+  @IsOptional()
+  ticketId?: string;
 
-  @IsString()\n  @IsOptional()\n  buyerId?: string;
+  @IsString()
+  @IsOptional()
+  buyerId?: string;
 
-  @IsNumber()\n  @IsOptional()\n  amountCents?: number;
+  @IsNumber()
+  @IsOptional()
+  amountCents?: number;
 
-  @IsString()\n  @IsOptional()\n  currency?: string;
+  @IsString()
+  @IsOptional()
+  currency?: string;
 
-  @IsString()\n  @IsOptional()\n  reason?: string;
+  @IsString()
+  @IsOptional()
+  reason?: string;
 
-  @IsString()\n  @IsOptional()\n  status?: string;
+  @IsString()
+  @IsOptional()
+  status?: string;
 
-  @IsOptional()\n  processedAt?: any;
+  @IsOptional()
+  processedAt?: any;
 }
 
 export class UpdateRefundDto extends PartialType(CreateRefundDto) {}

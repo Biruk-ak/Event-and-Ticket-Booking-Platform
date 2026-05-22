@@ -12,11 +12,16 @@ export class Analytics {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  eventId: string;
-  @Column({ type: 'varchar', nullable: true })\n  metric: string;
-  @Column({ type: 'int', default: 0 })\n  value: number;
-  @Column({ type: 'varchar', nullable: true })\n  dimensionsJson: string;
-  @Column({ type: 'timestamptz', nullable: true })\n  capturedAt: Date;
+  @Column({ type: 'varchar', nullable: true })
+  eventId: string;
+  @Column({ type: 'varchar', nullable: true })
+  metric: string;
+  @Column({ type: 'int', default: 0 })
+  value: number;
+  @Column({ type: 'varchar', nullable: true })
+  dimensionsJson: string;
+  @Column({ type: 'timestamptz', nullable: true })
+  capturedAt: Date;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

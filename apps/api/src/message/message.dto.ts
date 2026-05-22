@@ -3,19 +3,32 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateMessageDto {
-  @IsString()\n  @IsOptional()\n  threadId?: string;
+  @IsString()
+  @IsOptional()
+  threadId?: string;
 
-  @IsString()\n  @IsOptional()\n  senderId?: string;
+  @IsString()
+  @IsOptional()
+  senderId?: string;
 
-  @IsString()\n  @IsOptional()\n  recipientId?: string;
+  @IsString()
+  @IsOptional()
+  recipientId?: string;
 
-  @IsString()\n  @IsOptional()\n  eventId?: string;
+  @IsString()
+  @IsOptional()
+  eventId?: string;
 
-  @IsString()\n  @IsOptional()\n  body?: string;
+  @IsString()
+  @IsOptional()
+  body?: string;
 
-  @IsBoolean()\n  @IsOptional()\n  isRead?: boolean;
+  @IsBoolean()
+  @IsOptional()
+  isRead?: boolean;
 
-  @IsOptional()\n  sentAt?: any;
+  @IsOptional()
+  sentAt?: any;
 }
 
 export class UpdateMessageDto extends PartialType(CreateMessageDto) {}

@@ -3,21 +3,35 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateNotificationDto {
-  @IsString()\n  @IsOptional()\n  userId?: string;
+  @IsString()
+  @IsOptional()
+  userId?: string;
 
-  @IsString()\n  @IsOptional()\n  channel?: string;
+  @IsString()
+  @IsOptional()
+  channel?: string;
 
-  @IsString()\n  @IsOptional()\n  title?: string;
+  @IsString()
+  @IsOptional()
+  title?: string;
 
-  @IsString()\n  @IsOptional()\n  body?: string;
+  @IsString()
+  @IsOptional()
+  body?: string;
 
-  @IsString()\n  @IsOptional()\n  payloadJson?: string;
+  @IsString()
+  @IsOptional()
+  payloadJson?: string;
 
-  @IsString()\n  @IsOptional()\n  status?: string;
+  @IsString()
+  @IsOptional()
+  status?: string;
 
-  @IsOptional()\n  sentAt?: any;
+  @IsOptional()
+  sentAt?: any;
 
-  @IsOptional()\n  readAt?: any;
+  @IsOptional()
+  readAt?: any;
 }
 
 export class UpdateNotificationDto extends PartialType(CreateNotificationDto) {}

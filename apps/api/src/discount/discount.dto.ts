@@ -3,23 +3,39 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateDiscountDto {
-  @IsString()\n  @IsOptional()\n  code?: string;
+  @IsString()
+  @IsOptional()
+  code?: string;
 
-  @IsString()\n  @IsOptional()\n  eventId?: string;
+  @IsString()
+  @IsOptional()
+  eventId?: string;
 
-  @IsNumber()\n  @IsOptional()\n  percentOff?: number;
+  @IsNumber()
+  @IsOptional()
+  percentOff?: number;
 
-  @IsNumber()\n  @IsOptional()\n  amountOffCents?: number;
+  @IsNumber()
+  @IsOptional()
+  amountOffCents?: number;
 
-  @IsNumber()\n  @IsOptional()\n  maxRedemptions?: number;
+  @IsNumber()
+  @IsOptional()
+  maxRedemptions?: number;
 
-  @IsNumber()\n  @IsOptional()\n  redemptionCount?: number;
+  @IsNumber()
+  @IsOptional()
+  redemptionCount?: number;
 
-  @IsOptional()\n  startsAt?: any;
+  @IsOptional()
+  startsAt?: any;
 
-  @IsOptional()\n  endsAt?: any;
+  @IsOptional()
+  endsAt?: any;
 
-  @IsBoolean()\n  @IsOptional()\n  isActive?: boolean;
+  @IsBoolean()
+  @IsOptional()
+  isActive?: boolean;
 }
 
 export class UpdateDiscountDto extends PartialType(CreateDiscountDto) {}

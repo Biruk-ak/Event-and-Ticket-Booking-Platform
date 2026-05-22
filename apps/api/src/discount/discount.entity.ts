@@ -12,15 +12,24 @@ export class Discount {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  code: string;
-  @Column({ type: 'varchar', nullable: true })\n  eventId: string;
-  @Column({ type: 'int', default: 0 })\n  percentOff: number;
-  @Column({ type: 'int', default: 0 })\n  amountOffCents: number;
-  @Column({ type: 'int', default: 0 })\n  maxRedemptions: number;
-  @Column({ type: 'int', default: 0 })\n  redemptionCount: number;
-  @Column({ type: 'timestamptz', nullable: true })\n  startsAt: Date;
-  @Column({ type: 'timestamptz', nullable: true })\n  endsAt: Date;
-  @Column({ type: 'boolean', default: false })\n  isActive: boolean;
+  @Column({ type: 'varchar', nullable: true })
+  code: string;
+  @Column({ type: 'varchar', nullable: true })
+  eventId: string;
+  @Column({ type: 'int', default: 0 })
+  percentOff: number;
+  @Column({ type: 'int', default: 0 })
+  amountOffCents: number;
+  @Column({ type: 'int', default: 0 })
+  maxRedemptions: number;
+  @Column({ type: 'int', default: 0 })
+  redemptionCount: number;
+  @Column({ type: 'timestamptz', nullable: true })
+  startsAt: Date;
+  @Column({ type: 'timestamptz', nullable: true })
+  endsAt: Date;
+  @Column({ type: 'boolean', default: false })
+  isActive: boolean;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

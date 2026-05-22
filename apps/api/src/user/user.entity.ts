@@ -12,13 +12,20 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  email: string;
-  @Column({ type: 'varchar', nullable: true })\n  passwordHash: string;
-  @Column({ type: 'varchar', nullable: true })\n  displayName: string;
-  @Column({ type: 'varchar', nullable: true })\n  role: string;
-  @Column({ type: 'varchar', nullable: true })\n  phone: string;
-  @Column({ type: 'boolean', default: false })\n  isVerified: boolean;
-  @Column({ type: 'timestamptz', nullable: true })\n  lastLoginAt: Date;
+  @Column({ type: 'varchar', nullable: true })
+  email: string;
+  @Column({ type: 'varchar', nullable: true })
+  passwordHash: string;
+  @Column({ type: 'varchar', nullable: true })
+  displayName: string;
+  @Column({ type: 'varchar', nullable: true })
+  role: string;
+  @Column({ type: 'varchar', nullable: true })
+  phone: string;
+  @Column({ type: 'boolean', default: false })
+  isVerified: boolean;
+  @Column({ type: 'timestamptz', nullable: true })
+  lastLoginAt: Date;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

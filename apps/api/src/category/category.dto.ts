@@ -3,13 +3,21 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateCategoryDto {
-  @IsString()\n  @IsOptional()\n  name?: string;
+  @IsString()
+  @IsOptional()
+  name?: string;
 
-  @IsString()\n  @IsOptional()\n  slug?: string;
+  @IsString()
+  @IsOptional()
+  slug?: string;
 
-  @IsString()\n  @IsOptional()\n  description?: string;
+  @IsString()
+  @IsOptional()
+  description?: string;
 
-  @IsBoolean()\n  @IsOptional()\n  isActive?: boolean;
+  @IsBoolean()
+  @IsOptional()
+  isActive?: boolean;
 }
 
 export class UpdateCategoryDto extends PartialType(CreateCategoryDto) {}

@@ -12,13 +12,20 @@ export class Calendar {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  userId: string;
-  @Column({ type: 'varchar', nullable: true })\n  eventId: string;
-  @Column({ type: 'varchar', nullable: true })\n  title: string;
-  @Column({ type: 'timestamptz', nullable: true })\n  startsAt: Date;
-  @Column({ type: 'timestamptz', nullable: true })\n  endsAt: Date;
-  @Column({ type: 'timestamptz', nullable: true })\n  remindAt: Date;
-  @Column({ type: 'varchar', nullable: true })\n  source: string;
+  @Column({ type: 'varchar', nullable: true })
+  userId: string;
+  @Column({ type: 'varchar', nullable: true })
+  eventId: string;
+  @Column({ type: 'varchar', nullable: true })
+  title: string;
+  @Column({ type: 'timestamptz', nullable: true })
+  startsAt: Date;
+  @Column({ type: 'timestamptz', nullable: true })
+  endsAt: Date;
+  @Column({ type: 'timestamptz', nullable: true })
+  remindAt: Date;
+  @Column({ type: 'varchar', nullable: true })
+  source: string;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

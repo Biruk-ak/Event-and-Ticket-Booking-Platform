@@ -3,19 +3,33 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateVenueDto {
-  @IsString()\n  @IsOptional()\n  name?: string;
+  @IsString()
+  @IsOptional()
+  name?: string;
 
-  @IsString()\n  @IsOptional()\n  address?: string;
+  @IsString()
+  @IsOptional()
+  address?: string;
 
-  @IsString()\n  @IsOptional()\n  city?: string;
+  @IsString()
+  @IsOptional()
+  city?: string;
 
-  @IsString()\n  @IsOptional()\n  country?: string;
+  @IsString()
+  @IsOptional()
+  country?: string;
 
-  @IsNumber()\n  @IsOptional()\n  capacity?: number;
+  @IsNumber()
+  @IsOptional()
+  capacity?: number;
 
-  @IsNumber()\n  @IsOptional()\n  latitude?: number;
+  @IsNumber()
+  @IsOptional()
+  latitude?: number;
 
-  @IsNumber()\n  @IsOptional()\n  longitude?: number;
+  @IsNumber()
+  @IsOptional()
+  longitude?: number;
 }
 
 export class UpdateVenueDto extends PartialType(CreateVenueDto) {}

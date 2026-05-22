@@ -12,10 +12,14 @@ export class Category {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  name: string;
-  @Column({ type: 'varchar', nullable: true })\n  slug: string;
-  @Column({ type: 'varchar', nullable: true })\n  description: string;
-  @Column({ type: 'boolean', default: false })\n  isActive: boolean;
+  @Column({ type: 'varchar', nullable: true })
+  name: string;
+  @Column({ type: 'varchar', nullable: true })
+  slug: string;
+  @Column({ type: 'varchar', nullable: true })
+  description: string;
+  @Column({ type: 'boolean', default: false })
+  isActive: boolean;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

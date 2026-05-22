@@ -12,14 +12,22 @@ export class Refund {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  orderId: string;
-  @Column({ type: 'varchar', nullable: true })\n  ticketId: string;
-  @Column({ type: 'varchar', nullable: true })\n  buyerId: string;
-  @Column({ type: 'int', default: 0 })\n  amountCents: number;
-  @Column({ type: 'varchar', nullable: true })\n  currency: string;
-  @Column({ type: 'varchar', nullable: true })\n  reason: string;
-  @Column({ type: 'varchar', nullable: true })\n  status: string;
-  @Column({ type: 'timestamptz', nullable: true })\n  processedAt: Date;
+  @Column({ type: 'varchar', nullable: true })
+  orderId: string;
+  @Column({ type: 'varchar', nullable: true })
+  ticketId: string;
+  @Column({ type: 'varchar', nullable: true })
+  buyerId: string;
+  @Column({ type: 'int', default: 0 })
+  amountCents: number;
+  @Column({ type: 'varchar', nullable: true })
+  currency: string;
+  @Column({ type: 'varchar', nullable: true })
+  reason: string;
+  @Column({ type: 'varchar', nullable: true })
+  status: string;
+  @Column({ type: 'timestamptz', nullable: true })
+  processedAt: Date;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

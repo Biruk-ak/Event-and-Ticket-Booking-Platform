@@ -3,19 +3,30 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateCalendarDto {
-  @IsString()\n  @IsOptional()\n  userId?: string;
+  @IsString()
+  @IsOptional()
+  userId?: string;
 
-  @IsString()\n  @IsOptional()\n  eventId?: string;
+  @IsString()
+  @IsOptional()
+  eventId?: string;
 
-  @IsString()\n  @IsOptional()\n  title?: string;
+  @IsString()
+  @IsOptional()
+  title?: string;
 
-  @IsOptional()\n  startsAt?: any;
+  @IsOptional()
+  startsAt?: any;
 
-  @IsOptional()\n  endsAt?: any;
+  @IsOptional()
+  endsAt?: any;
 
-  @IsOptional()\n  remindAt?: any;
+  @IsOptional()
+  remindAt?: any;
 
-  @IsString()\n  @IsOptional()\n  source?: string;
+  @IsString()
+  @IsOptional()
+  source?: string;
 }
 
 export class UpdateCalendarDto extends PartialType(CreateCalendarDto) {}

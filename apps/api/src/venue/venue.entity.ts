@@ -12,13 +12,20 @@ export class Venue {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  name: string;
-  @Column({ type: 'varchar', nullable: true })\n  address: string;
-  @Column({ type: 'varchar', nullable: true })\n  city: string;
-  @Column({ type: 'varchar', nullable: true })\n  country: string;
-  @Column({ type: 'int', default: 0 })\n  capacity: number;
-  @Column({ type: 'int', default: 0 })\n  latitude: number;
-  @Column({ type: 'int', default: 0 })\n  longitude: number;
+  @Column({ type: 'varchar', nullable: true })
+  name: string;
+  @Column({ type: 'varchar', nullable: true })
+  address: string;
+  @Column({ type: 'varchar', nullable: true })
+  city: string;
+  @Column({ type: 'varchar', nullable: true })
+  country: string;
+  @Column({ type: 'int', default: 0 })
+  capacity: number;
+  @Column({ type: 'int', default: 0 })
+  latitude: number;
+  @Column({ type: 'int', default: 0 })
+  longitude: number;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

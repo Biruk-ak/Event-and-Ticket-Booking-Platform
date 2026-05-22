@@ -3,27 +3,47 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateTicketDto {
-  @IsString()\n  @IsOptional()\n  eventId?: string;
+  @IsString()
+  @IsOptional()
+  eventId?: string;
 
-  @IsString()\n  @IsOptional()\n  ticketTypeId?: string;
+  @IsString()
+  @IsOptional()
+  ticketTypeId?: string;
 
-  @IsString()\n  @IsOptional()\n  buyerId?: string;
+  @IsString()
+  @IsOptional()
+  buyerId?: string;
 
-  @IsString()\n  @IsOptional()\n  orderId?: string;
+  @IsString()
+  @IsOptional()
+  orderId?: string;
 
-  @IsString()\n  @IsOptional()\n  status?: string;
+  @IsString()
+  @IsOptional()
+  status?: string;
 
-  @IsString()\n  @IsOptional()\n  qrPayload?: string;
+  @IsString()
+  @IsOptional()
+  qrPayload?: string;
 
-  @IsString()\n  @IsOptional()\n  seatLabel?: string;
+  @IsString()
+  @IsOptional()
+  seatLabel?: string;
 
-  @IsNumber()\n  @IsOptional()\n  priceCents?: number;
+  @IsNumber()
+  @IsOptional()
+  priceCents?: number;
 
-  @IsString()\n  @IsOptional()\n  currency?: string;
+  @IsString()
+  @IsOptional()
+  currency?: string;
 
-  @IsOptional()\n  purchasedAt?: any;
+  @IsOptional()
+  purchasedAt?: any;
 
-  @IsOptional()\n  checkedInAt?: any;
+  @IsOptional()
+  checkedInAt?: any;
 }
 
 export class UpdateTicketDto extends PartialType(CreateTicketDto) {}

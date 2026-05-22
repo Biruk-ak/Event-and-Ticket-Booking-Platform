@@ -12,17 +12,28 @@ export class Ticket {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'varchar', nullable: true })\n  eventId: string;
-  @Column({ type: 'varchar', nullable: true })\n  ticketTypeId: string;
-  @Column({ type: 'varchar', nullable: true })\n  buyerId: string;
-  @Column({ type: 'varchar', nullable: true })\n  orderId: string;
-  @Column({ type: 'varchar', nullable: true })\n  status: string;
-  @Column({ type: 'varchar', nullable: true })\n  qrPayload: string;
-  @Column({ type: 'varchar', nullable: true })\n  seatLabel: string;
-  @Column({ type: 'int', default: 0 })\n  priceCents: number;
-  @Column({ type: 'varchar', nullable: true })\n  currency: string;
-  @Column({ type: 'timestamptz', nullable: true })\n  purchasedAt: Date;
-  @Column({ type: 'timestamptz', nullable: true })\n  checkedInAt: Date;
+  @Column({ type: 'varchar', nullable: true })
+  eventId: string;
+  @Column({ type: 'varchar', nullable: true })
+  ticketTypeId: string;
+  @Column({ type: 'varchar', nullable: true })
+  buyerId: string;
+  @Column({ type: 'varchar', nullable: true })
+  orderId: string;
+  @Column({ type: 'varchar', nullable: true })
+  status: string;
+  @Column({ type: 'varchar', nullable: true })
+  qrPayload: string;
+  @Column({ type: 'varchar', nullable: true })
+  seatLabel: string;
+  @Column({ type: 'int', default: 0 })
+  priceCents: number;
+  @Column({ type: 'varchar', nullable: true })
+  currency: string;
+  @Column({ type: 'timestamptz', nullable: true })
+  purchasedAt: Date;
+  @Column({ type: 'timestamptz', nullable: true })
+  checkedInAt: Date;
 
   @CreateDateColumn({ type: 'timestamptz' })
   createdAt: Date;

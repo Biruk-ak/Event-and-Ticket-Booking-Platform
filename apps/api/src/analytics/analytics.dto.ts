@@ -3,15 +3,24 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreateAnalyticsDto {
-  @IsString()\n  @IsOptional()\n  eventId?: string;
+  @IsString()
+  @IsOptional()
+  eventId?: string;
 
-  @IsString()\n  @IsOptional()\n  metric?: string;
+  @IsString()
+  @IsOptional()
+  metric?: string;
 
-  @IsNumber()\n  @IsOptional()\n  value?: number;
+  @IsNumber()
+  @IsOptional()
+  value?: number;
 
-  @IsString()\n  @IsOptional()\n  dimensionsJson?: string;
+  @IsString()
+  @IsOptional()
+  dimensionsJson?: string;
 
-  @IsOptional()\n  capturedAt?: any;
+  @IsOptional()
+  capturedAt?: any;
 }
 
 export class UpdateAnalyticsDto extends PartialType(CreateAnalyticsDto) {}
